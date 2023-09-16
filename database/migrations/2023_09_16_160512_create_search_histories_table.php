@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('search_histories', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id');
+            $table->foreignId('item_id')->constrained('items');
             $table->timestamps();
         });
     }
