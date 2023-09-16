@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/login',[AuthController::class,'login']);
 Route::post('/registation',[AuthController::class,'registation']);
+Route::post('/email/verification',[AuthController::class,'email_varification']);
