@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
+            $table->String('address');
+            $table->foreignId('country_id')->constrained('countries');
+            $table->foreignId('city_id')->constrained('cities');
             $table->timestamps();
         });
     }

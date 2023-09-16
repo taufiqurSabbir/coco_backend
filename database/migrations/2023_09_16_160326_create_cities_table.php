@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->id();
+            $table->String('name');
+            $table->String('zip_code');
+            $table->foreignId('country_id')->constrained('countries');
             $table->timestamps();
         });
     }
