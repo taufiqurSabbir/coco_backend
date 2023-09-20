@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('image_assets', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->foreignId('user_id')->constrained();
             $table->string('image_type')->comment('profile_image,protfolio_image');
             $table->string('image');
             $table->timestamps();

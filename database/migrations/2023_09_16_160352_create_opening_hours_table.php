@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('opening_hours', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->foreignId('user_id')->constrained();
             $table->String('open_from');
             $table->String('open_to');
             $table->String('day_from');

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('social_links', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->foreignId('user_id')->constrained();
             $table->string('facebook');
             $table->string('instagram');
             $table->string('youtube');

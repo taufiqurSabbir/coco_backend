@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('freelancer_equipments', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id');
+            $table->foreignId('user_id')->constrained();
             $table->foreignId('equipment_id')->constrained('equipments');
             $table->timestamps();
         });

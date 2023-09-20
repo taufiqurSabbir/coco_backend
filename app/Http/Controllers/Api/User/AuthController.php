@@ -8,6 +8,7 @@ use App\Http\Requests\User\RegistationRequest;
 use App\Http\Resources\User\AuthResource;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class AuthController extends Controller
