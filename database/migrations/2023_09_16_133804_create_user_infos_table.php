@@ -17,7 +17,10 @@ return new class extends Migration
             $table->String('otp');
             $table->boolean('is_Verified');
             $table->String('description');
-            $table->String('');
+            $table->String('phone');
+            $table->String('website');
+            $table->String('language');
+            $table->String('price_per_day');
             $table->timestamps();
         });
     }

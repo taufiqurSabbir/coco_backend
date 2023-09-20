@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('freelancer_services', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id');
+            $table->foreignId('service_id')->constrained('services');
             $table->timestamps();
         });
     }

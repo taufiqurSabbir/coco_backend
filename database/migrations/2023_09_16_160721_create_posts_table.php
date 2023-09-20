@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id');
+            $table->string('title')->nullable();
+            $table->foreignId('image_id')->constrained('image_assets');
+            $table->string('like')->default('0');
             $table->timestamps();
         });
     }
